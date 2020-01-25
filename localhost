@@ -1,0 +1,16 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        server_name localhost 192.168.0.5;
+
+        location ~* \.(css|js|gif|jpe?g|png|map|ico|ttf|woff|woff2|pdf)$ {
+        root /app/static;
+        expires 168h;
+    }
+
+        location / {
+            include proxy_params;
+            proxy_pass http://unix:/app/bit.sock;
+        }
+}

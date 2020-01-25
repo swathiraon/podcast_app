@@ -1,0 +1,308 @@
+{% extends "layout.html" %} {% block title %}Department Of Electronics and Communication Enginnering{% endblock %} {% block content %}
+
+<!-- ##### Breadcrumb Area Start ##### -->
+<section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(http://localhost:8080/img/bg-img/40.jpg);">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="breadcrumb-content">
+                    <h2>Department Of Electronics and Communication Enginnering</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Breadcrumb Area End ##### -->
+
+
+
+<!-- ##### About Us Area Start ##### -->
+<section class="about-us-area" style="padding-top: 30px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-8">
+                <!-- About Us Content -->
+                <div class="about-us-content bg-white mb-30 p-30 box-shadow">
+                    <!-- Section Title -->
+                    <div class="section-heading">
+                        <h5>About</h5>
+                    </div>
+                    <p>Electronics and Communication Engineering Department was established in the year 1979 with an intake of 40 students for Bachelor of Engineering (BE) programme and affiliated to Bangalore University. Subsequently the department of Electronics
+                        and Communication Engineering of Bangalore Institute of Technology was affiliated to Visvesvaraya Technological University during the year 1998. Currently, the department is offering Bachelor of Engineering with an intake of 180
+                        students and Master of Technology (M.Tech) in VLSI Design and Embedded systems with an intake of 18 students as well as M.Tech in Digital Electronics and Communication with an intake of 24 students under Post Graduate (PG) programme.
+                        Department is also offers Doctoral Program under VTU, BIT ECE Research center. The department has well qualified and experienced staff of 49 faculty which includes 5 Professors 10 Associate Professors and 34 Assistant Professors
+                        with an average experience of faculty is more than 15 years. There are about 9 Doctoral qualified faculty. The department has laboratory facilities to meet the curriculum of Visvesvaraya Technological University and beyond and
+                        is also supported by a well trained technical staff. As of now department students have achieved 20 ranks under Visvesvaraya Technological University with an accomplishment of VTU gold medal(1st Rank) by Ms.Mamatha.R for the academic
+                        year 2015-16 and 10 ranks under Bangalore University. The students of the department are well placed in various companies for jobs by the end of the course.<br>The department is headed by Dr.K.V.Prasad, who obtained his Ph.D in
+                        1993 from the university of Hull, Hull, United Kingdom under Nehru Centenary British Fellowships (Foreign and Common Wealth Office) Offered by Govt. of united Kingdom through Govt. of India. Prior to that, he did his B.Tech in
+                        1983 and M.Tech in 1985 from Sri Venkateswara University, Tirupati, Andhra Pradesh, India. Dr K.V.Prasad is with the department since 2010 after a brief industrial experiences.
+
+                    </p><br><br>
+                    <div class="d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="http://localhost:8080/faculty/EC01.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Dr.K.V. Prasad</h5>
+                                <p class="card-text">Professor & Head</p>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <!-- Team Member Area -->
+                    <div class="section-heading mt-30">
+                        <h5>Vision and Mission</h5>
+                    </div>
+
+                    <h3>
+                        VISION
+                    </h3>
+                    <div>
+                        Imparting Quality Education to achieve Academic Excellence in Electronics and Communication Engineering for Global Competent Engineers.
+                    </div>
+
+                    <br>
+
+                    <h3>
+                        MISSION
+                    </h3>
+                    <ul>
+                        <li>
+                            Create state of art infrastructure for quality education.
+                        </li>
+                        <li>
+                            Nurture innovative concepts and problem solving skills.
+                        </li>
+                        <li>
+                            Delivering Professional Engineers to meet the societal needs.
+                        </li>
+
+                    </ul>
+                    <h3>Program Educational Objectives (PEO’s)</h3>
+                    <p> 1. Prepare graduates to be professionals, Practicing engineers and entrepreneurs in the field of Electronics and communication engineering.<br> 2. To acquire sufficient knowledge base for innovative techniques in design and development
+                        of tools and systems.<br> 3. Capable of competing globally in multidisciplinary field.<br> 4. Achieve personal and professional success with awareness and commitment to ethical and social responsibilities as an individual as well
+                        as a team.<br> 5. Graduates will maintain and improve technical competence through continuous learning process. </p>
+                    <h3>Program Specific Outcomes</h3>
+                    <p> 1: The graduates will be able to apply the principles of Electronics and Communication in core areas.<br> 2: An ability to use latest hardware and software tools in Electronics and Communication engineering.<br> 3: Preparing Graduates
+                        to satisfy industrial needs and pursue higher studies with social-awareness and universal moral values.</p>
+
+                    <!-- Faculty-->
+                    <div class="section-heading mt-30">
+                        <h5>Faculty</h5>
+                    </div>
+                    {% for fac in facs %}
+                    <!-- Single Team Member -->
+                    <a href="#">
+                        <div class="single-team-member d-flex align-items-center">
+                            <div class="team-member-thumbnail">
+                                <img src="http://localhost:8080/faculty/{{fac[0]}}.jpg" alt="">
+
+                            </div>
+                            <div class="team-member-content">
+                                <h6>{{fac[1]}}</h6>
+                                <span>{{fac[2]}}</span> Qualification:-{{fac[3]}}
+                                <br> Email:- <a href="mailto:{{fac[4]}}" style="color: blue;">{{fac[4]}}</a>
+
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+
+                <!-- Insert Faculty here  -->
+
+
+            </div>
+
+
+            <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+                <div class="sidebar-area bg-white mb-30 box-shadow">
+
+                    <div class="section-heading">
+                        <h5>Other Links</h5>
+                    </div>
+                    <div class="single-sidebar-widget p-30" style="position: relative;top: -50px;">
+
+                        <div class="social-followers-info">
+                            <button id="achBtn" class="btn"><span>Achievements </span></button>
+                            <button class="btn" id="iBtn"><span>Infrastructure </span></button>
+                            <button class="btn" id="rBtn"><span>Research </span></button>
+                            <button class="btn" id="pBtn"><span>Post Graduate </span></button>
+                            <br>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### About Us Area End ##### -->
+
+<div id="aModal" class="amodal" style="width: 100%;">
+
+    <!-- Modal content -->
+    <div class="amodal-content">
+        <span class="aclose">&times;<br></span> {% include "ece_ach.html" %}
+
+    </div>
+
+
+</div>
+
+<div id="iModal" class="imodal">
+
+    <!-- Modal content -->
+    <div class="imodal-content">
+        <span class="iclose">&times;<br></span> {% include "ece_infra.html" %}
+
+    </div>
+
+
+</div>
+
+<div id="rModal" class="rmodal">
+
+    <!-- Modal content -->
+    <div class="rmodal-content">
+        <span class="rclose">&times;<br></span> {% include "ece_research.html" %}
+
+    </div>
+
+
+</div>
+
+<div id="pModal" class="pmodal">
+
+    <!-- Modal content -->
+    <div class="pmodal-content">
+        <span class="pclose">&times;<br></span> {% include "ece_post.html" %}
+
+    </div>
+
+
+</div>
+
+<script>
+    //Acievement
+    // Get the modal
+    var amodal = document.getElementById("aModal");
+
+    // Get the button that opens the modal
+    var abtn = document.getElementById("achBtn");
+
+    // Get the <span> element that closes the modal
+    var aspan = document.getElementsByClassName("aclose")[0];
+
+    // When the user clicks on the button, open the modal 
+    abtn.onclick = function() {
+        console.log("Click");
+        amodal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    aspan.onclick = function() {
+        amodal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == amodal) {
+            amodal.style.display = "none";
+        }
+    }
+
+    //Infrastructure
+    // Get the modal
+    var imodal = document.getElementById("iModal");
+
+    // Get the button that opens the modal
+    var ibtn = document.getElementById("iBtn");
+
+    // Get the <span> element that closes the modal
+    var ispan = document.getElementsByClassName("iclose")[0];
+
+    // When the user clicks on the button, open the modal 
+    ibtn.onclick = function() {
+        console.log("Click");
+        imodal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    ispan.onclick = function() {
+        imodal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == imodal) {
+            imodal.style.display = "none";
+        }
+    }
+
+    //Research
+    // Get the modal
+    var rmodal = document.getElementById("rModal");
+
+    // Get the button that opens the modal
+    var rbtn = document.getElementById("rBtn");
+
+    // Get the <span> element that closes the modal
+    var rspan = document.getElementsByClassName("rclose")[0];
+
+    // When the user clicks on the button, open the modal 
+    rbtn.onclick = function() {
+        console.log("Click");
+        rmodal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    rspan.onclick = function() {
+        rmodal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == rmodal) {
+            rmodal.style.display = "none";
+        }
+    }
+
+    //Post
+    // Get the modal
+    var pmodal = document.getElementById("pModal");
+
+    // Get the button that opens the modal
+    var pbtn = document.getElementById("pBtn");
+
+    // Get the <span> element that closes the modal
+    var pspan = document.getElementsByClassName("pclose")[0];
+
+    // When the user clicks on the button, open the modal 
+    pbtn.onclick = function() {
+        console.log("Click");
+        pmodal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    pspan.onclick = function() {
+        pmodal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == pmodal) {
+            pmodal.style.display = "none";
+        }
+    }
+</script>
+
+
+
+</div>
+{% endblock %}

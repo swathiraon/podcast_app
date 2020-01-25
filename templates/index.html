@@ -1,0 +1,635 @@
+{% extends "layout.html" %} {% block title %}Banglore Institute of Technology {% endblock %} {% block content %}
+
+<!-- ##### Hero Area Start ##### -->
+<div class="hero-area owl-carousel">
+    <!-- Single Blog Post -->
+    <div class="hero-blog-post bg-img bg-overlay" style="background-image: url(http://localhost:8080/img/bg-img/1.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <!-- Post Contetnt -->
+                    <div class="post-content text-center">
+                        <div class="post-meta" data-animation="fadeInUp" data-delay="100ms">
+                        </div>
+                        <a href="#" class="post-title" data-animation="fadeInUp" data-delay="300ms" style="cursor: default;">Welcome To Banglore Institute of Technology</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Single Blog Post -->
+    <div class="hero-blog-post bg-img bg-overlay" style="background-image: url(http://localhost:8080/img/bg-img/2.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <!-- Post Contetnt -->
+                    <div class="post-content text-center">
+                        
+                        <a href="./placement" class="post-title" data-animation="fadeInUp" data-delay="300ms">BIT HAS 100% PLACEMENT RECORD</a>
+                        <a href="./placement" class="sub-text" data-animation="bounceIn" data-delay="500ms">Learn More About Placements</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</div>
+<!-- ##### Hero Area End ##### -->
+
+<!-- ##### Mag Posts Area Start ##### -->
+<section class="mag-posts-area d-flex flex-wrap">
+
+    <!-- >>>>>>>>>>>>>>>>>>>>
+         Post Left Sidebar Area
+        <<<<<<<<<<<<<<<<<<<<< -->
+    <div class="post-sidebar-area left-sidebar mt-30 mb-30 bg-white box-shadow">
+        <!-- Sidebar Widget -->
+        <div class="single-sidebar-widget p-30">
+            <!-- Section Title -->
+            <div class="section-heading">
+                <h5>Announcements</h5>
+            </div>
+            {% if annons|length==0 %}
+            <div> No Announcements</div>
+            <hr> {% else %} {% for annon in annons %}
+            <!-- Single Blog Post -->
+            <div class="single-blog-post d-flex">
+                <div class="post-thumbnail">
+                    <span style="font-size: xx-large;">{{annon[2].day}}</span><span>{{getDate(annon[2].day)}}</span><br>{{annon[2].strftime("%b")}} {{annon[2].year}}
+                </div>
+                <div class="post-content">
+                    <a href="./announcement/{{annon[0]}}" class="post-title">{{annon[1]}}</a>
+                </div>
+            </div>
+
+            {% endfor %}
+           <div><a href="./archive/1" style="color: inherit;"><button class="btn"><span>View all</span></button> </a></div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- >>>>>>>>>>>>>>>>>>>>
+             Main Posts Area
+        <<<<<<<<<<<<<<<<<<<<< -->
+
+    <div class="mag-posts-content mt-30 mb-30 p-30 box-shadow">
+        <div class="section-heading">
+            <h5>Welcome</h5>
+        </div>
+        <p style="font-size: large;color: black;">Bangalore Institute of Technology (BIT) was started in the year 1979 with the objective of providing quality education in the ﬁeld of Technology and thereby serving the society. It has reached enviable level of excellence in technical education.
+            This was achieved due to the unconditional support of Rajya Vokkaligara Sangha, committed staff and students. The environment of BIT motivates the student to quench their thirst for knowledge. The college thrives to achieve the all-round development
+            of the students.<br><br> BIT has always been at the forefront of modern technology and has the distinction of being the ﬁrst College to introduce a full-ﬂedged degree in Computer Science and Engineering in Karnataka. The institute has visualized the
+            areas of future growth and incorporated various courses over the years. At present BIT has 9 undergraduate, 10 post graduate and 13 research centers. BIT has an annual intake of 1300 students. There are a number of centers carrying out inter-disciplinary
+            research and many collaborative programs exist between the college and other professional institutions, like IISc, NAL. The Chemistry department has been recognized as one of the latest research centers in Karnataka. BIT also has the acclaim
+            of being the Study center for IGNOU programmes.<br><br> BIT is proud to say that it has 289 faculty members with excellent knowledge and teaching caliber. 83 faculty members have PhD degree and 71 are pursuing PhD. Sixty percent of faculty members
+            have served BIT for more than twenty years. The Institution has 294 efficient and committed team of supporting staff.</p>
+        <!-- Trending Now Posts Area -->
+        <div class="trending-now-posts mb-30" style="padding-top: 30px;">
+            <!-- Section Title -->
+            <div class="section-heading">
+                <h5>ACCREDITATIONS</h5>
+            </div>
+
+
+            <div class="trending-post-slides owl-carousel">
+                <!-- Single Trending Post -->
+                <div class="single-trending-post">
+                    <img src="http://localhost:8080/img/new-img/nba.png" alt="" style="height: 300px;">
+                    <div class="post-content">
+                        <a href="video-post.html" class="post-title">National Board of Accreditation</a>
+                    </div>
+                </div>
+
+                <!-- Single Trending Post -->
+                <div class="single-trending-post">
+                    <img src="http://localhost:8080/img/new-img/naac.png" alt="" style="height: 300px;">
+                    <div class="post-content">
+
+                        <a href="video-post.html" class="post-title">National Assessment and Accreditation Council</a>
+                    </div>
+                </div>
+
+                <!-- Single Trending Post -->
+                <div class="single-trending-post">
+                    <img src="http://localhost:8080/img/new-img/nirf.jpg" alt="" style="height: 300px;">
+                    <div class="post-content">
+
+                        <a href="video-post.html" class="post-title">National Institutional Ranking Framework</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Feature Video Posts Area -->
+        <div class="feature-video-posts mb-30">
+            <!-- Section Title -->
+            <div class="section-heading">
+                <h5>Placement Details</h5>
+            </div>
+
+            <div class="featured-video-posts">
+                <div class="row">
+                    <div class="col-12 col-lg-7">
+                        <!-- Single Featured Post -->
+                        <div class="single-featured-post">
+                            <!-- Thumbnail -->
+                            <div class="post-thumbnail mb-50">
+                                <img src="http://localhost:8080/img/new-img/graph.png" alt="">
+
+                            </div>
+                            <!-- Post Contetnt -->
+                            <div class="post-content">
+                                <a href="video-post.html" class="post-title">A Closer Look At Our Placement Details</a>
+                                <p></p>
+
+
+
+                            </div>
+                            <!-- Post Share Area -->
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-5">
+                        <!-- Featured Video Posts Slide -->
+                        <div class="featured-video-posts-slide owl-carousel">
+
+                            <div class="single--slide">
+                                <!-- Single Blog Post -->
+                                <div class="single-blog-post d-flex style-3">
+                                    <div class="post-thumbnail">
+                                        <img src="http://localhost:8080/img/new-img/google.png" alt="">
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="single-post.html" class="post-title">Google</a>
+                                        <a href class="post-title">Details</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single Blog Post -->
+                                <div class="single-blog-post d-flex style-3">
+                                    <div class="post-thumbnail">
+                                        <img src="http://localhost:8080/img/new-img/ms.jpg" alt="">
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="single-post.html" class="post-title">Microsoft</a>
+                                        <a href class="post-title">Details</a>
+                                    </div>
+                                </div>
+
+
+                                <!-- Single Blog Post -->
+                                <div class="single-blog-post d-flex style-3">
+                                    <div class="post-thumbnail">
+                                        <img src="http://localhost:8080/img/new-img/amazon.jpg" alt="">
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="single-post.html" class="post-title">Amazon</a>
+                                        <a href class="post-title">Details</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single Blog Post -->
+                                <div class="single-blog-post d-flex style-3">
+                                    <div class="post-thumbnail">
+                                        <img src="http://localhost:8080/img/new-img/cisco.png" alt="">
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="single-post.html" class="post-title">Cisco</a>
+                                        <a href class="post-title">Details</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single Blog Post -->
+                                <div class="single-blog-post d-flex style-3">
+                                    <div class="post-thumbnail">
+                                        <img src="http://localhost:8080/img/new-img/intel.png" alt="">
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="single-post.html" class="post-title">Intel</a>
+                                        <a href class="post-title">Details</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="single--slide">
+                                <!-- Single Blog Post -->
+                                <div class="single-blog-post d-flex style-3">
+                                    <div class="post-thumbnail">
+                                        <img src="http://localhost:8080/img/new-img/google.png" alt="">
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="single-post.html" class="post-title">Google</a>
+                                        <a href class="post-title">Details</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single Blog Post -->
+                                <div class="single-blog-post d-flex style-3">
+                                    <div class="post-thumbnail">
+                                        <img src="http://localhost:8080/img/new-img/ms.jpg" alt="">
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="single-post.html" class="post-title">Microsoft</a>
+                                        <a href class="post-title">Details</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single Blog Post -->
+                                <div class="single-blog-post d-flex style-3">
+                                    <div class="post-thumbnail">
+                                        <img src="http://localhost:8080/img/new-img/amazon.jpg" alt="">
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="single-post.html" class="post-title">Amazon</a>
+                                        <a href class="post-title">Details</a>
+                                    </div>
+                                </div>
+                                <!-- Single Blog Post -->
+                                <div class="single-blog-post d-flex style-3">
+                                    <div class="post-thumbnail">
+                                        <img src="http://localhost:8080/img/new-img/cisco.png" alt="">
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="single-post.html" class="post-title">Cisco</a>
+                                        <a href class="post-title">Details</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single Blog Post -->
+                                <div class="single-blog-post d-flex style-3">
+                                    <div class="post-thumbnail">
+                                        <img src="http://localhost:8080/img/new-img/intel.png" alt="">
+                                    </div>
+                                    <div class="post-content">
+                                        <a href="single-post.html" class="post-title">Intel</a>
+                                        <a href class="post-title">Details</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Most Viewed Videos -->
+        <div class="most-viewed-videos mb-30">
+            <!-- Section Title -->
+            <div class="section-heading">
+                <h5>Most Viewed Videos</h5>
+            </div>
+
+            <div class="most-viewed-videos-slide owl-carousel">
+
+                <!-- Single Blog Post -->
+                <div class="single-blog-post style-4">
+                    <div class="post-thumbnail">
+                        <img src="http://localhost:8080/img/bg-img/28.jpg" alt="">
+                        <a href="video-post.html" class="video-play"><i class="fa fa-play"></i></a>
+                        <span class="video-duration">09:27</span>
+                    </div>
+                    <div class="post-content">
+                        <a href="single-post.html" class="post-title">A Guide To Rocky Mountain Vacations</a>
+                        <div class="post-meta d-flex">
+                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Post -->
+                <div class="single-blog-post style-4">
+                    <div class="post-thumbnail">
+                        <img src="http://localhost:8080/img/bg-img/29.jpg" alt="">
+                        <a href="video-post.html" class="video-play"><i class="fa fa-play"></i></a>
+                        <span class="video-duration">09:27</span>
+                    </div>
+                    <div class="post-content">
+                        <a href="single-post.html" class="post-title">Dentists Are Smiling Over Painless Veneer Alternative</a>
+                        <div class="post-meta d-flex">
+                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Post -->
+                <div class="single-blog-post style-4">
+                    <div class="post-thumbnail">
+                        <img src="http://localhost:8080/img/bg-img/30.jpg" alt="">
+                        <a href="video-post.html" class="video-play"><i class="fa fa-play"></i></a>
+                        <span class="video-duration">09:27</span>
+                    </div>
+                    <div class="post-content">
+                        <a href="single-post.html" class="post-title">Become A Travel Pro In One Easy Lesson</a>
+                        <div class="post-meta d-flex">
+                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Post -->
+                <div class="single-blog-post style-4">
+                    <div class="post-thumbnail">
+                        <img src="http://localhost:8080/img/bg-img/28.jpg" alt="">
+                        <a href="video-post.html" class="video-play"><i class="fa fa-play"></i></a>
+                        <span class="video-duration">09:27</span>
+                    </div>
+                    <div class="post-content">
+                        <a href="single-post.html" class="post-title">A Guide To Rocky Mountain Vacations</a>
+                        <div class="post-meta d-flex">
+                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Post -->
+                <div class="single-blog-post style-4">
+                    <div class="post-thumbnail">
+                        <img src="http://localhost:8080/img/bg-img/29.jpg" alt="">
+                        <a href="video-post.html" class="video-play"><i class="fa fa-play"></i></a>
+                        <span class="video-duration">09:27</span>
+                    </div>
+                    <div class="post-content">
+                        <a href="single-post.html" class="post-title">Dentists Are Smiling Over Painless Veneer Alternative</a>
+                        <div class="post-meta d-flex">
+                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Post -->
+                <div class="single-blog-post style-4">
+                    <div class="post-thumbnail">
+                        <img src="http://localhost:8080/img/bg-img/30.jpg" alt="">
+                        <a href="video-post.html" class="video-play"><i class="fa fa-play"></i></a>
+                        <span class="video-duration">09:27</span>
+                    </div>
+                    <div class="post-content">
+                        <a href="single-post.html" class="post-title">Become A Travel Pro In One Easy Lesson</a>
+                        <div class="post-meta d-flex">
+                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Sports Videos -->
+        <div class="sports-videos-area">
+            <!-- Section Title -->
+            <div class="section-heading">
+                <h5>Sports Videos</h5>
+            </div>
+
+            <div class="sports-videos-slides owl-carousel mb-30">
+                <!-- Single Featured Post -->
+                <div class="single-featured-post">
+                    <!-- Thumbnail -->
+                    <div class="post-thumbnail mb-50">
+                        <img src="http://localhost:8080/img/bg-img/22.jpg" alt="">
+                        <a href="video-post.html" class="video-play"><i class="fa fa-play"></i></a>
+                    </div>
+                    <!-- Post Contetnt -->
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <a href="#">MAY 8, 2018</a>
+                            <a href="archive.html">lifestyle</a>
+                        </div>
+                        <a href="video-post.html" class="post-title">A Closer Look At Our Front Porch Items From Lowe’s</a>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+                    </div>
+                    <!-- Post Share Area -->
+                    <div class="post-share-area d-flex align-items-center justify-content-between">
+                        <!-- Post Meta -->
+                        <div class="post-meta pl-3">
+                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                        </div>
+                        <!-- Share Info -->
+                        <div class="share-info">
+                            <a href="#" class="sharebtn"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                            <!-- All Share Buttons -->
+                            <div class="all-share-btn d-flex">
+                                <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="https://twitter.com/bitsince1979" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+
+                                <a href="https://www.instagram.com/bitsince1979/" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Featured Post -->
+                <div class="single-featured-post">
+                    <!-- Thumbnail -->
+                    <div class="post-thumbnail mb-50">
+                        <img src="http://localhost:8080/img/bg-img/22.jpg" alt="">
+                        <a href="video-post.html" class="video-play"><i class="fa fa-play"></i></a>
+                    </div>
+                    <!-- Post Contetnt -->
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <a href="#">MAY 8, 2018</a>
+                            <a href="archive.html">lifestyle</a>
+                        </div>
+                        <a href="video-post.html" class="post-title">A Closer Look At Our Front Porch Items From Lowe’s</a>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+                    </div>
+                    <!-- Post Share Area -->
+                    <div class="post-share-area d-flex align-items-center justify-content-between">
+                        <!-- Post Meta -->
+                        <div class="post-meta pl-3">
+                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                        </div>
+                        <!-- Share Info -->
+                        <div class="share-info">
+                            <a href="#" class="sharebtn"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                            <!-- All Share Buttons -->
+                            <div class="all-share-btn d-flex">
+                                <a href="https://www.facebook.com/bitsince1979/" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="https://twitter.com/bitsince1979" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+
+                                <a href="https://www.instagram.com/bitsince1979/" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Featured Post -->
+                <div class="single-featured-post">
+                    <!-- Thumbnail -->
+                    <div class="post-thumbnail mb-50">
+                        <img src="http://localhost:8080/img/bg-img/22.jpg" alt="">
+                        <a href="video-post.html" class="video-play"><i class="fa fa-play"></i></a>
+                    </div>
+                    <!-- Post Contetnt -->
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <a href="#">MAY 8, 2018</a>
+                            <a href="archive.html">lifestyle</a>
+                        </div>
+                        <a href="video-post.html" class="post-title">A Closer Look At Our Front Porch Items From Lowe’s</a>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+                    </div>
+                    <!-- Post Share Area -->
+                    <div class="post-share-area d-flex align-items-center justify-content-between">
+                        <!-- Post Meta -->
+                        <div class="post-meta pl-3">
+                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                        </div>
+                        <!-- Share Info -->
+                        <div class="share-info">
+                            <a href="#" class="sharebtn"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                            <!-- All Share Buttons -->
+                            <div class="all-share-btn d-flex">
+                                <a href="https://www.facebook.com/bitsince1979/" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="https://twitter.com/bitsince1979" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+
+                                <a href="https://www.instagram.com/bitsince1979/" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Single Blog Post -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-blog-post d-flex style-3 mb-30">
+                        <div class="post-thumbnail">
+                            <img src="http://localhost:8080/img/bg-img/31.jpg" alt="">
+                        </div>
+                        <div class="post-content">
+                            <a href="single-post.html" class="post-title">From Wetlands To Canals And Dams Amsterdam Is Alive</a>
+                            <div class="post-meta d-flex">
+                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Post -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-blog-post d-flex style-3 mb-30">
+                        <div class="post-thumbnail">
+                            <img src="http://localhost:8080/img/bg-img/32.jpg" alt="">
+                        </div>
+                        <div class="post-content">
+                            <a href="single-post.html" class="post-title">From Wetlands To Canals And Dams Amsterdam Is Alive</a>
+                            <div class="post-meta d-flex">
+                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Post -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-blog-post d-flex style-3 mb-30">
+                        <div class="post-thumbnail">
+                            <img src="http://localhost:8080/img/bg-img/33.jpg" alt="">
+                        </div>
+                        <div class="post-content">
+                            <a href="single-post.html" class="post-title">From Wetlands To Canals And Dams Amsterdam Is Alive</a>
+                            <div class="post-meta d-flex">
+                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Post -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-blog-post d-flex style-3 mb-30">
+                        <div class="post-thumbnail">
+                            <img src="http://localhost:8080/img/bg-img/34.jpg" alt="">
+                        </div>
+                        <div class="post-content">
+                            <a href="single-post.html" class="post-title">From Wetlands To Canals And Dams Amsterdam Is Alive</a>
+                            <div class="post-meta d-flex">
+                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <!-- >>>>>>>>>>>>>>>>>>>>
+         Post Right Sidebar Area
+        <<<<<<<<<<<<<<<<<<<<< -->
+    <div class="post-sidebar-area right-sidebar mt-30 mb-30 box-shadow">
+
+
+        <div class="single-sidebar-widget p-30">
+            <div class="section-heading">
+                <h5>C And R Rules</h5>
+            </div>
+            <div class="social-followers-info">
+                <button class="btn" id="kanrules"><span>BIT Kannada Rules </span></button>
+                <button class="btn" id="kansch2"><span>BIT Kannada Schedule-2 </span></button>
+                <button class="btn" id="kansch3"><span>BIT Kannada Schedule-3 </span></button>
+                <button class="btn" id="kansch4"><span>BIT Kannada Schedule-4 </span></button>
+                <button class="btn" id="engrules"><span>BIT English Rules </span></button>
+                <button class="btn" id="engsch1"><span>BIT English Schedule-1 </span></button>
+                <button class="btn" id="engsch2"><span>BIT English Schedule-2 </span></button>
+                <button class="btn" id="engsch3"><span>BIT English Schedule-3 </span></button>
+                <button class="btn" id="engsch4"><span>BIT English Schedule-4</span></button>
+                <br>
+            </div>
+        </div>
+
+        <!-- Sidebar Widget -->
+        <div class="single-sidebar-widget p-30">
+            <!-- Social Followers Info -->
+            <div class="social-followers-info">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/bitsince1979/" class="facebook-fans"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+                <!-- Twitter -->
+                <a href="https://twitter.com/bitsince1979" class="twitter-followers"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/bitsince1979/" class="instagram-followers"><i class="fa fa-instagram"></i> <span>Instagram</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Mag Posts Area End ##### -->
+
+{% endblock %}

@@ -1,0 +1,289 @@
+{% extends "layout.html" %}
+{% block title %}DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING{% endblock %}
+{% block content %}
+<!-- ##### Breadcrumb Area Start ##### -->
+<section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(http://localhost:8080/img/bg-img/40.jpg);">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12">
+                <div class="breadcrumb-content">
+                    <h2>DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Breadcrumb Area End ##### -->
+
+
+
+<!-- ##### About Us Area Start ##### -->
+<section class="about-us-area" style="padding-top: 30px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-8">
+                <!-- About Us Content -->
+                <div class="about-us-content bg-white mb-30 p-30 box-shadow">
+                    <!-- Section Title -->
+                    <div class="section-heading">
+                        <h5>About</h5>
+                    </div>
+                    <p >In KARNATAKA STATE, BIT was the pioneer in establishing the COMPUTER SCIENCE AND ENGINEERING department, with affiliation to BANGALORE UNIVERSITY in the year 1981. The syllabus was framed by then H.O.D. Prof. M. Ramakrishna, ever since the department has adopted and evolved with the fast pace of technology. <br><br>
+
+                        The Department offers Under-Graduation [UG], Post-Graduation [PG] and Research under VTU. PG programme, M. Tech in Computer Science and Engineering was established in the year 2008.<br><br>
+                        
+                        The Department has excellent infrastructure facilities with six labs, such as Algorithm & Data Structures, Database & Networking Labs, Web Technologies, System Software & Operating System Lab and The Microprocessor Lab, to prepare the techno savvy’s to conquer the demands of the IT industry, R&D organizations and computer related areas. The objective is to educate, train and develop world class research and IT professionals with a mastery of not only hardware and software skills but also soft skills for professional success that helps 95% of the Computer Science students to get placed in top software companies like JP Morgan, Akamai, Accenture, Robert Bosch, IGate etc. Most of the students are offered higher pay packages from software giants like Linkedin, Adobe, Netapp, Cisco, Oracle etc.<br><br>
+                        
+                        The Department offers an excellent academic environment with a team of highly qualified and dedicated faculties with most of the staff’s having doctoral degrees. Many other staff members are currently involved in doing their search work and are involved in taking care of several software projects. The department of Computer Science and Engineering constantly organizes seminars and other interactive programs to keep the student community updated about the latest happening in the IT-sector.<br><br>
+                        
+                        The Department is currently headed by Dr. Asha .T B.E., M.E., Ph.D</p><br><br>
+                        
+                                <div class="d-flex justify-content-center"><div class="card" style="width: 18rem;">
+                                    <img src="http://localhost:8080/faculty/CS01.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dr. Asha .T</h5>
+                                        <p class="card-text">Prof. & Head of the Dept
+                                            </p>
+                                        </div>
+                                    </div></div>
+                               
+                            
+                            <!-- Team Member Area -->
+                            <div class="section-heading mt-30">
+                               <h5> Vision and Mission </h5>
+                            </div>
+                                    <h3>Vision</h3>
+    <p >To be a center of excellence in computer engineering education, empowering graduates as highly skilled professionals. </p>
+    <h3>Mission</h3>
+    <p>   •	To provide a platform for effective learning with emphasis on technical excellence.<br>
+       •	To train the students to meet current industrial standards and adapt to emerging technologies.<br>
+       •	To instill the drive for higher learning and research initiatives.<br>
+       •	To inculcate the qualities of leadership and Entrepreneurship.</p>
+    <h3>Program Educational Objectives (PEO’s)</h3>
+    <p > 1. Provide graduates with both fundamental and advanced concepts of computer science and engineering for acquiring knowledge.<br>
+     2. To prepare the graduates to apply computer engineering knowledge to build  professional career.<br>
+     3. To enable students to engage in lifelong learning with the ability to involve in higher studies and research.<br>
+     4. To encourage graduates to imbibe professional ethics and soft skills. </p>
+    <h3>Program Specific Outcomes</h3>
+    <p> 1: The graduates of the program will have the ability to build software products   by applying theoretical concepts   and programming skills.<br>
+     2: The graduates of the program will have the ability to pursue higher studies and Research in the modern computing era.</p>	
+     
+                                    <!-- Faculty-->   
+                                  <div class="section-heading mt-30">
+                                    <h5>Faculty</h5>
+                                </div>
+                                {% for fac in facs %}
+                                <!-- Single Team Member -->
+                                <a href="#" >
+                                <div class="single-team-member d-flex align-items-center">
+                                    <div class="team-member-thumbnail">
+                                        <img src="http://localhost:8080/faculty/{{fac[0]}}.jpg" alt="">
+                                        
+                                    </div>
+                                    <div class="team-member-content">
+                                        <h6>{{fac[1]}}</h6>
+                                        <span>{{fac[2]}}</span>
+                                        Qualification:-{{fac[3]}}<br>
+                                           Email:- <a href="mailto:{{fac[4]}}" style="color: blue;">{{fac[4]}}</a>
+                                        
+                                    </div>
+                                </div>
+                                </a>
+                                {% endfor %}
+                            </div>
+                           
+                    
+                            
+                        </div>
+                        
+                        
+                        <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+                            <div class="sidebar-area bg-white mb-30 box-shadow">
+                                
+                                <div class="section-heading">
+                                    <h5>Other Links</h5>
+                                </div>
+                                <div class="single-sidebar-widget p-30" style="position: relative;top: -50px;">
+                                
+                                <div class="social-followers-info">
+                                    <button id="achBtn" class="btn" ><span>Achievements </span></button>
+                                    <button class="btn" id="iBtn"><span>Infrastructure </span></button>
+                                    <button class="btn" id="rBtn"><span>Research </span></button>
+                                    <button class="btn" id="pBtn" ><span>Post Graduate </span></button>
+                                    <br>
+                                </div>
+                                </div>
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ##### About Us Area End ##### -->
+            
+            <div id="aModal" class="amodal">
+
+                <!-- Modal content -->
+                <div class="amodal-content">
+                  <span class="aclose">&times;<br></span>
+                  {% include "cse_ach.html" %}
+
+                </div>
+
+
+            </div>
+
+            <div id="iModal" class="imodal">
+
+                <!-- Modal content -->
+                <div class="imodal-content">
+                  <span class="iclose">&times;<br></span>
+                  {% include "cse_infra.html" %}
+
+                </div>
+
+
+            </div>
+
+            <div id="rModal" class="rmodal">
+
+                <!-- Modal content -->
+                <div class="rmodal-content">
+                  <span class="rclose">&times;<br></span>
+                  {% include "cse_research.html" %}
+
+                </div>
+
+
+            </div>
+
+            <div id="pModal" class="pmodal">
+
+                <!-- Modal content -->
+                <div class="pmodal-content">
+                  <span class="pclose">&times;<br></span>
+                  {% include "cse_post.html" %}
+
+                </div>
+
+
+            </div>
+
+            <script>
+
+
+//Acievement
+  // Get the modal
+var amodal = document.getElementById("aModal");
+
+// Get the button that opens the modal
+var abtn = document.getElementById("achBtn");
+
+// Get the <span> element that closes the modal
+var aspan = document.getElementsByClassName("aclose")[0];
+
+// When the user clicks on the button, open the modal 
+abtn.onclick = function() {
+  console.log("Click");
+  amodal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+aspan.onclick = function() {
+  amodal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == amodal) {
+    amodal.style.display = "none";
+  }
+}
+
+//Infrastructure
+  // Get the modal
+  var imodal = document.getElementById("iModal");
+
+// Get the button that opens the modal
+var ibtn = document.getElementById("iBtn");
+
+// Get the <span> element that closes the modal
+var ispan = document.getElementsByClassName("iclose")[0];
+
+// When the user clicks on the button, open the modal 
+ibtn.onclick = function() {
+  console.log("Click");
+  imodal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+ispan.onclick = function() {
+  imodal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == imodal) {
+    imodal.style.display = "none";
+  }
+}
+
+//Research
+  // Get the modal
+  var rmodal = document.getElementById("rModal");
+
+// Get the button that opens the modal
+var rbtn = document.getElementById("rBtn");
+
+// Get the <span> element that closes the modal
+var rspan = document.getElementsByClassName("rclose")[0];
+
+// When the user clicks on the button, open the modal 
+rbtn.onclick = function() {
+  console.log("Click");
+  rmodal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+rspan.onclick = function() {
+  rmodal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == rmodal) {
+    rmodal.style.display = "none";
+  }
+}
+
+//Post
+  // Get the modal
+  var pmodal = document.getElementById("pModal");
+
+// Get the button that opens the modal
+var pbtn = document.getElementById("pBtn");
+
+// Get the <span> element that closes the modal
+var pspan = document.getElementsByClassName("pclose")[0];
+
+// When the user clicks on the button, open the modal 
+pbtn.onclick = function() {
+  console.log("Click");
+  pmodal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+pspan.onclick = function() {
+  pmodal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == pmodal) {
+    pmodal.style.display = "none";
+  }
+}
+            </script>
+            {% endblock %}
