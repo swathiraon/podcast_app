@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+    .mySlides {display:none;}
+    div.polaroid {
+        margin-left:auto;
+        margin-right:auto;
+        padding-left:10px;
+        padding-right:10px;
+        padding-top:10px;
+          width: 80%;
+          background-color:#1abc9c;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          margin-bottom: 25px;
+
+}
+    div.container {
+  text-align: center;
+  padding: 10px 20px;
+        color: white;
+}
+
+@media only screen and (max-width: 300px) {
+ .container {font-size: 11px}
+ }
+</style>
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="container">
+    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(http://localhost:8080/img/bg-img/40.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class  ="breadcrumb-content">
+                        <h2>Entrepreneurship Development Cell</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="mag-breadcrumb py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">About</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### About Us Area Start ##### -->
+    <section class="about-us-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-xl-8">
+                    <!-- About Us Content -->
+                    <div class="about-us-content bg-white mb-30 p-30 box-shadow">
+                        <!-- Section Title -->
+                        <div class="section-heading">
+                            <h3>EDC</h3>
+                        </div>
+                        <img src="static/img/club-img/edc_logo.jpg" alt="logo" style="width:100px;height:100px;padding:-10px;">
+                        <p align="justify">Entrepreneurship Development Cell Of Bangalore Institute of Technology, will help the
+technical clubs and the academic projects to be
+converted into a business model.</p>
+                        <p align="justify">We recently conducted a Stock Market Hands on Experience workshop headed by Vipin Mandyam, Entrepreneurship Summit and Idea
+Lab Seminar headed by Dr. Shweta Singh, at Dr.
+S Ramegowda Hall. </p>
+                        <div class="polaroid">
+                            <div class="w3-content w3-section" style="max-width:500px;height:450px">
+                               <div class="mySlides">
+                          <img src="static/img/club-img/edc1.jpg" alt="trying" style="width:100%;height:400px">
+                                   <div class="container">Various sessions to develop entrepreneurial skills
+                          </div>
+                               </div>
+                                   <div class="mySlides">
+                          <img src="static/img/club-img/edc2.jpg" alt="trying" style="width:100%;height:400px">
+                                   <div class="container">Various sessions to develop entrepreneurial skills
+                          </div>
+                                   </div>
+
+                               <div class="mySlides">
+                          <img src="static/img/club-img/edc3.jpg" alt="trying" style="width:100%;height:400px">
+                                   <div class="container">
+                          Various sessions to develop entrepreneurial skills
+                          </div>
+                               </div>
+                           <div class="mySlides">
+                          <img src="static/img/club-img/edc4.jpg" alt="trying" style="width:100%;height:400px">
+                                   <div class="container">Entrepreneurial activities by students
+                          </div>
+                                   </div>
+                           <div class="mySlides">
+                          <img src="static/img/club-img/edc5.jpg" alt="trying" style="width:100%;height:400px">
+                                   <div class="container">Brainstorm 2.0
+                          </div>
+                                   </div>
+                                <div class="mySlides">
+                          <img src="static/img/club-img/edc6.jpg" alt="trying" style="width:100%;height:400px">
+                                   <div class="container">Entrepreneurial activities by students
+                          </div>
+                                   </div>
+
+                          <div class="mySlides">
+                          <img src="static/img/club-img/edc8.jpg" alt="trying" style="width:100%;height:400px">
+                                   <div class="container">Panel discussion on entrepreneurship
+                          </div>
+                                   </div>
+
+                        </div>
+
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+
+}
+</script>
+    {% endblock %}

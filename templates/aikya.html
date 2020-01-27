@@ -1,0 +1,149 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+    .mySlides {display:none;}
+    div.polaroid {
+        margin-left:auto;
+        margin-right:auto;
+        padding-left:10px;
+        padding-right:10px;
+        padding-top:10px;
+          width: 80%;
+          background-color:#1abc9c;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          margin-bottom: 25px;
+
+}
+    div.container {
+  text-align: center;
+  padding: 10px 20px;
+        color: white;
+}
+@media only screen and (max-width: 300px) {
+ .container {font-size: 11px}
+ }
+
+</style>
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="container">
+    <section class="breadcrumb-area bg-img bg-overlay" style="background-image: url(http://localhost:8080/img/bg-img/40.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class  ="breadcrumb-content">
+                        <h2>Aikya Club of BIT</h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="mag-breadcrumb py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">About</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### About Us Area Start ##### -->
+    <section class="about-us-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-xl-8">
+                    <!-- About Us Content -->
+                    <div class="about-us-content bg-white mb-30 p-30 box-shadow">
+                        <!-- Section Title -->
+                        <div class="section-heading">
+                            <h3>Aikya Club</h3>
+                        </div>
+
+                        <img src="static/img/club-img/aikya8.jpg" alt="logo" style="width:100px;height:100px;padding:-10px;">
+                        <p align="justify">AIKYA is a youth initiative of The Akshaya Patra Foundation. AIKYA provides a platform for the
+students to build and hone their leadership and communication capabilities, thereby creating social leaders,
+who bring out a positive development in our country. We work around government schools by organizing cleanliness
+campaigns, tree  plantation drives and, school education programs, bringing in an overall impact in the ecosystem of
+the government schools.  </p>
+                        <div class="polaroid">
+                            <div class="w3-content w3-section" style="max-width:500px;height:450px">
+                               <div class="mySlides">
+                          <img src="static/img/club-img/aikya1.jpg" alt="trying" style="width:100%;height:400px">
+                                   <div class="container">Plantation drive in college
+                          </div>
+                               </div>
+                                   <div class="mySlides">
+                          <img src="static/img/club-img/aikya12.jpg" alt="trying" style="width:100%;height:400px">
+                                   <div class="container">Akshaya Patra Kithcen Visit
+                          </div>
+                                   </div>
+
+                               <div class="mySlides">
+                          <img src="static/img/club-img/aikya3.jpg" alt="trying" style="width:100%;height:400px">
+                                   <div class="container">
+                          Cleanliness Drive
+                          </div>
+                               </div>
+                           <div class="mySlides">
+                          <img src="static/img/club-img/aikya4.jpg" alt="trying" style="width:100%;height:400px">
+                                   <div class="container">Why should you join Aikya club?
+                          </div>
+                                   </div>
+                           <div class="mySlides">
+                          <img src="static/img/club-img/aikya5.jpg" alt="trying" style="width:100%;height:400px">
+                                   <div class="container">Akshaya Patra Kitchen Visit
+                          </div>
+                                   </div>
+
+                          <div class="mySlides">
+                          <img src="static/img/club-img/aikya17.jpg" alt="trying" style="width:100%;height:400px">
+                                   <div class="container">Teaching activity in government schools
+                          </div>
+                                   </div>
+
+                        </div>
+
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+
+}
+</script>
+    {% endblock %}
