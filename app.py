@@ -15,7 +15,7 @@ auth_plugin='mysql_native_password'
    mycursor = mydb.cursor()
    mycursor.execute("SELECT * FROM Announcements order by id desc LIMIT 5")
    myresult = mycursor.fetchall()
-   return render_template('eco.html', annons=myresult,getDate=getDate)
+   return render_template('voice.html', annons=myresult,getDate=getDate)
 
 @app.route('/about')
 def about():
